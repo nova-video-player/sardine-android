@@ -19,7 +19,7 @@ android {
     compileSdkVersion 30
 
     defaultConfig {
-        minSdkVersion 15
+        minSdkVersion 19
         consumerProguardFiles 'proguard-rules.pro'
     }
 }
