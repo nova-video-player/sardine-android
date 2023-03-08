@@ -20,6 +20,7 @@ public class LockResponseHandler extends ValidatingResponseHandler<String>
     public String handleResponse(Response response) throws IOException {
         validateResponse(response);
         ResponseBody body = response.body();
+        response.close();
         if (body == null) {
             throw new SardineException("No entity found in response", response.code(), response.message());
         }

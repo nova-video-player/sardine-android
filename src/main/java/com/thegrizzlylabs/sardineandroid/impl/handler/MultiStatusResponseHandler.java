@@ -17,14 +17,16 @@ import okhttp3.ResponseBody;
 public class MultiStatusResponseHandler extends ValidatingResponseHandler<Multistatus> {
     @Override
     public Multistatus handleResponse(Response response) throws IOException {
-        super.validateResponse(response);
+        try(Response r = response) {
+            super.validateResponse(response);
 
-        ResponseBody body = response.body();
-        if (body == null) {
-            throw new SardineException("No entity found in response", response.code(), response.message());
+            ResponseBody body = response.body();
+            if (body == null) {
+                throw new SardineException("No entity found in response", response.code(), response.message());
+            }
+
+            return getMultistatus(body.byteStream());
         }
-
-        return getMultistatus(body.byteStream());
     }
 
     /**
