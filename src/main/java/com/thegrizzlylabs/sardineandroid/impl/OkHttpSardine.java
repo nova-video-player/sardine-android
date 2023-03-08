@@ -622,8 +622,9 @@ public class OkHttpSardine implements Sardine {
     }
 
     private <T> T execute(Request request, ResponseHandler<T> responseHandler) throws IOException {
-        Response response = client.newCall(request).execute();
-        return responseHandler.handleResponse(response);
+        try(Response response = client.newCall(request).execute()) {
+            return responseHandler.handleResponse(response);
+        }
     }
 
 }
