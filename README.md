@@ -1,9 +1,11 @@
 # sardine-android
 
-[![Build Status](https://github.com/thegrizzlylabs/sardine-android/actions/workflows/android.yml/badge.svg)](https://github.com/thegrizzlylabs/sardine-android/actions/workflows/android.yml)
-[![Version number](https://jitpack.io/v/thegrizzlylabs/sardine-android.svg) ](https://jitpack.io/#thegrizzlylabs/sardine-android)
+[![Build Status](https://github.com/nova-video-player/sardine-android/actions/workflows/android.yml/badge.svg)](https://github.com/nova-video-player/sardine-android/actions/workflows/android.yml)
+[![Version number](https://jitpack.io/v/nova-video-player/sardine-android.svg) ](https://jitpack.io/#nova-video-player/sardine-android)
 
 A WebDAV client for Android, using [OkHttp](https://github.com/square/okhttp) as HTTP client.
+
+This is a fork of [TheGrizzyLabs'](https://github.com/thegrizzlylabs/sardine-android) sardine-android. It seems unmaintained now, but thanks for the fish!
 
 ## Getting started
 
