@@ -25,8 +25,6 @@ class BasicAuthenticator implements Authenticator {
             return null; // Give up, we've already attempted to authenticate.
         }
 
-        System.out.println("Authenticating for response: " + response);
-        System.out.println("Challenges: " + response.challenges());
         String credential = Credentials.basic(userName, password);
         return response.request().newBuilder()
                 .header("Authorization", credential)
