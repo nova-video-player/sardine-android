@@ -52,12 +52,12 @@ import static org.junit.Assert.fail;
 @Category(IntegrationTest.class)
 public class FunctionalSardineTest {
 
-    public static final String WEBDAV_URL = "http://demo.owncloud.org/remote.php/webdav";
-    public static final String USERNAME = "test";
-    public static final String PASSWORD = "test";
+    public static final String WEBDAV_URL = "https://demo.filerun.com/remote.php/dav/files/admin";
+    public static final String USERNAME = "admin";
+    public static final String PASSWORD = "admin";
 
     private final Sardine sardine = new OkHttpSardine();
-    private final String testFolder = "test" + UUID.randomUUID().toString();
+    private final String testFolder = "@Home/auto-test-sardine/test" + UUID.randomUUID().toString();
 
     @Before
     public void setUp() throws IOException {
