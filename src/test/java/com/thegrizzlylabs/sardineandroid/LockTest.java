@@ -20,6 +20,7 @@ import com.thegrizzlylabs.sardineandroid.impl.OkHttpSardine;
 import com.thegrizzlylabs.sardineandroid.impl.SardineException;
 
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
 
@@ -39,6 +40,7 @@ public class LockTest {
         sardine.setCredentials(FunctionalSardineTest.USERNAME, FunctionalSardineTest.PASSWORD);
     }
 
+    @Ignore("Current test server deletes file despite the lock...")
     @Test
     public void testLockUnlock() throws Exception {
         String url = FunctionalSardineTest.WEBDAV_URL + "/" + UUID.randomUUID().toString();
@@ -70,6 +72,7 @@ public class LockTest {
         }
     }
 
+    @Ignore("Current test server returns 423 Locked when refreshing lock")
     @Test
     public void lockRefreshUnlock() throws Exception {
         final String url = FunctionalSardineTest.WEBDAV_URL + "/" + UUID.randomUUID().toString();
